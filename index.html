@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using javascript</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+<body>
+
+<div class="container">
+
+    <div class="heading">
+<h2>Calculator App By Ahmed Alali</h2>
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+<div class="calculator">
+
+    <form>
+
+<div class="UserInput">
+
+<input type="text" name="display" >
+
+</div>
+
+<div class="mainButtons">
+<input type="button" value="AC" onclick="updateDisplay('')">
+<input type="button" value="DE" onclick="updateDisplay()">
+<input type="button" value=".">
+<input type="button" value="/">
+
+
+
+
+</div>
+
+
+
+<div class="numbers">
+    <input type="button" value="7" onclick="updateDisplay('7')">
+    <input type="button" value="8"onclick="updateDisplay('8')">
+    <input type="button" value="9"onclick="updateDisplay('9')">
+    <input type="button" value="*">
+    
+    
+    
+    
+    </div>
+
+    <div class="numbers">
+        <input type="button" value="4"onclick="updateDisplay('4')">
+        <input type="button" value="5"onclick="updateDisplay('5')">
+        <input type="button" value="6"onclick="updateDisplay('6')">
+        <input type="button" value="-"onclick="updateDisplay('-')">
+        
+        
+        
+        
+        </div>
+        
+        <div class="numbers">
+            <input type="button" value="00"onclick="updateDisplay('00')">
+            <input type="button" value="0"onclick="updateDisplay('0')">
+            <input type="button" value="=" onclick="Sum()">
+            
+            
+            
+            
+            </div>
+            
+    
+
+    </form>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
+
+
+
+<script>
+
+function updateDisplay(value){
+
+document.forms[0].display.value+=value;
+
+
+}
+
+
+
+function Sum(){
+
+    document.forms[0].display.value = eval(document.forms[0].display.value);
+
+}
+
+
+</script>
